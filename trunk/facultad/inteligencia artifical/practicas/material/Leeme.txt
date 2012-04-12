@@ -1,0 +1,3 @@
+Descomprimir los archivos, y agregar, los mapas y las librerias de a Agent/lib y Agent/map, una vez hecho esto, en codeblocks ir a proyect -> built options, y eliminar las librerias de Agent, (no la de default, que sino estamos igual), y agregar las de la carpeta Agent/lib.
+
+Y podras ejecutarlo, para que vaya bien , sustituir agent.cpp y agent.h, por el mio, dnd tiene la memoria hecho y se ve como no va aleatoriamente y solo se choca una vez con el obstaculo :D.
