@@ -83,13 +83,31 @@ ostream & operator<<(ostream & x, enterolargo & e){
   return x;
 }
 
+enterolargo enterolargo::clasico(enterolargo & e){
+		enterolargo resul;
+		
+}
 
 
 
 enterolargo  enterolargo::operator*(enterolargo & d){
+
+int mul;
+int acarreo=0;
+int k;
+int lon=this->entero.size();
 enterolargo resul;
 
-// Por hacer....
+for(k=0;k<lon;k++){
+	mul=(entero[k]*d.entero[k])+acarreo;
+	acarreo=mul/10;
+	mul=mul%10;
+	resul.entero.push_back(mul);
+}
+
+if(acarreo!=0) resul.entero.push_back(acarreo);
+resul.signo='+';
+
 
 return resul;
 }
@@ -104,6 +122,7 @@ Nmin = (entero.size() < d.entero.size())?entero.size(): d.entero.size();
 
 int acarreo=0;
 
+cout << "numero minimo: " << Nmin << endl;
 
 for (k=0; k<Nmin; k++) {
   resul.entero.push_back( (entero[k] + d.entero[k] + acarreo ) % 10); //sacamos el modulo
@@ -122,6 +141,8 @@ if (Nmin == entero.size())
   }
   
 if (acarreo>0) resul.entero.push_back(acarreo);
+cout << "acarreo: " << acarreo << endl;
+cout << "resultado: " << resul << endl;
 return resul;
 }
  
