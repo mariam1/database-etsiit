@@ -32,7 +32,7 @@ cin>>b;
 enterolargo numero1(a), numero2(b);
 enterolargo aux;
 
-cout<< numero1 << " " << numero2 << "\n\n";
+cout << numero1 << " " << numero2 << "\n\n";
 aux = numero1*numero2;
 cout << "producto " << aux << endl; 
 return (0);

@@ -105,9 +105,13 @@ for(k=0;k<lon;k++){
 	resul.entero.push_back(mul);
 }
 
-if(acarreo!=0) resul.entero.push_back(acarreo);
-resul.signo='+';
+cout << "mul_1: " << mul << endl;
+cout << "acarreo: " << acarreo << endl;
 
+if(acarreo!=0) resul.entero.push_back(acarreo);
+//resul.signo='+';
+
+cout << "resul: " << resul << endl;
 
 return resul;
 }
@@ -122,7 +126,7 @@ Nmin = (entero.size() < d.entero.size())?entero.size(): d.entero.size();
 
 int acarreo=0;
 
-cout << "numero minimo: " << Nmin << endl;
+//cout << "numero minimo: " << Nmin << endl;
 
 for (k=0; k<Nmin; k++) {
   resul.entero.push_back( (entero[k] + d.entero[k] + acarreo ) % 10); //sacamos el modulo
@@ -141,8 +145,8 @@ if (Nmin == entero.size())
   }
   
 if (acarreo>0) resul.entero.push_back(acarreo);
-cout << "acarreo: " << acarreo << endl;
-cout << "resultado: " << resul << endl;
+//cout << "acarreo: " << acarreo << endl;
+//cout << "resultado: " << resul << endl;
 return resul;
 }
  
@@ -192,3 +196,13 @@ if (Nmin == entero.size())
 return resul;
 
 }//fin metodo resta
+
+enterolargo enterolargo::dyv_multiplicacion(enterolargo & d){
+	
+	enterolargo resultado;
+	enterolargo resultado2;
+	enterolargo resultado3;
+	
+	int primera_mitad_entero = (entero.size()/2-1);
+	//enterolargo primera_mitad_d = (d.entero.size()/2-1);
+}
