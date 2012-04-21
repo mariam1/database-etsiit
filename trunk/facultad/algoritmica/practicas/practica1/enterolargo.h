@@ -29,6 +29,8 @@ public:
   enterolargo operator+(enterolargo &d); 
   enterolargo operator-(enterolargo & d);
   enterolargo operator*(enterolargo & d);
+  enterolargo clasico(enterolargo & e);
+  enterolargo dyv_multiplicacion(enterolargo & e);
   enterolargo & operator= (const enterolargo & e);
 
   
@@ -39,6 +41,7 @@ private:
  void completa_izq(int n);
  void ajusta( );
  int pot_2(int n);
+ char signo;
   
   // Por simplicidad asumimos numeros positivos.....
   vector<int> entero;  
