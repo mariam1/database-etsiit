@@ -29,9 +29,10 @@ public:
   enterolargo operator+(enterolargo &d); 
   enterolargo operator-(enterolargo & d);
   enterolargo operator*(enterolargo & d);
-  enterolargo clasico(enterolargo & e);
-  enterolargo dyv_multiplicacion(enterolargo & e);
+  enterolargo clasico(enterolargo & d);
+  enterolargo dyv_multiplicacion(enterolargo & d);
   enterolargo & operator= (const enterolargo & e);
+  enterolargo digitos(enterolargo & d);
 
   
   friend ostream & operator<<(ostream & x, enterolargo & e);
