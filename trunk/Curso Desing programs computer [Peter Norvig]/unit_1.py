@@ -5,34 +5,33 @@
 def poker(hands):
   "return the best hand: poker ([hand,...]) => hand"
   return max(hands,key = hand_rank)
-
-def hand_rank(hand):
- "Return a value indicating the ranking of a hand. "
-  ranks = card_ranks(hand)
-  if straight(ranks) and flush(hand):
-	return (8, max(ranks)) # 2 3 4 5 6 (8, 6) 6 7 8 9 T (8, 10)
-  elif kind(4,ranks):
-	return (7, kind(4, ranks),kind(1, ranks) #  9 9 9 9 3 (7,9,3)
-  elif kind(3, ranks) and kind(2,ranks):
-	return (6, kind(3, ranks), kind(2, ranks)
-  elif flush(hand):
-	return (5, ranks)
-  elif straight(ranks):
-	return (4, max(ranks))
-  elif kind(3,ranks):
-	return (3, kind(3, ranks), ranks)
-  elif two_pair(ranks)
-	return (2,two_pair(ranks), ranks)
-  elif kind (2, ranks):
-	return (1, kind(2, ranks), ranks)
-  else:
-	return (0, ranks)
-
+  
 def card_ranks(cards):
   "Return a list of the ranks, sorted with higher first."
-  ranks = ['--23456789TJQKA'.index(r) for r,s in hands]
-  ranks.sort(reverse = True)
+  ranks = ['--23456789TJQKA'.index(r) for r,s in hand]
+  ranks.sort(reverse=True)
   return ranks
+
+def hand_rank(hand):
+	ranks = card_ranks(hand)
+	if straight(ranks) and flush(hand):
+		return (8, max(ranks)) # 2 3 4 5 6 (8, 6) 6 7 8 9 T (8, 10)
+	elif kind(4,ranks):
+		return (7, kind(4, ranks),kind(1, ranks)) #  9 9 9 9 3 (7,9,3)
+	elif kind(3, ranks) and kind(2, ranks):
+		return (6, kind(3, ranks), kind(2, ranks))
+	elif flush(hand):
+		return (5, ranks)
+	elif straight(ranks):
+		return (4, max(ranks))
+	elif kind(3,ranks):
+		return (3, kind(3, ranks), ranks)
+	elif two_pair(ranks):
+		return (2,two_pair(ranks), ranks)
+	elif kind (2, ranks):
+		return (1, kind(2, ranks), ranks)
+	else:
+		return (0, ranks)
 
 def straight(ranks):
   "Return True if the ordered ranks form a 5-card straight."
@@ -50,6 +49,16 @@ def kind(n , ranks):
 	if ranks.count(r) == n: return r
   return None
 
+def two_pair(ranks):
+	"""If there are two pair, return the two ranks as a
+	tuple: (highest, lowest); otherwise return None."""
+	pair = kind(2, list(reversed(ranks)))
+	if pair and lowpair !=pair:
+		return (pair, lowpair)
+	else:
+		return None
+
+	
 def test():
   "Test cases for the functions in poker program." #3 manos de cartas 
   sf = "6C 7C 8C 9C TC".split() #letra -> picas,corazones,diamantes....
