@@ -7,7 +7,7 @@
 
 using namespace std;
 
-enterolargo enterolargo::digitos(enterolargo & d){
+enterolargo enterolargo::digitos(enterolargo &d){
 	
 enterolargo res;
 
@@ -23,6 +23,24 @@ for (int i = Nmin; i >=MAX(entero.size(),0);i--)
 res.entero.insert(res.entero.begin(), entero[i]);
 
 return res;
+}
+
+enterolargo enterolargo::dyv_multiplicacion(enterolargo & d){
+
+enterolargo resultado;
+enterolargo resultado2;
+enterolargo resultado3;
+
+enterolargo m1_e = entero.digitos(0,entero.size()/2-1);
+enterolargo m1_d = d.entero.digitos(0,d.entero.size()/2-1);
+
+enterolargo m2_e = entero.digitos( entero.size()/2,entero.size() );
+enterolargo m2_d = d.entero.digitos( d.entero.size()/2,d.entero.size() );
+
+if ( entero.size() < 3 )
+	resultado = entero * d;
+
+return resultado;
 }
 
 /*Nmin = (entero.size() < d.entero.size())?entero.size(): d.entero.size();
@@ -56,6 +74,7 @@ return res;
 	
 	return primera_mitad_e;
 }
+* 
 
 int main (){
 	
