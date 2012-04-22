@@ -109,7 +109,7 @@ cout << "mul_1: " << mul << endl;
 cout << "acarreo: " << acarreo << endl;
 
 if(acarreo!=0) resul.entero.push_back(acarreo);
-//resul.signo='+';
+
 
 cout << "resul: " << resul << endl;
 
@@ -197,12 +197,3 @@ return resul;
 
 }//fin metodo resta
 
-enterolargo enterolargo::dyv_multiplicacion(enterolargo & d){
-	
-	enterolargo resultado;
-	enterolargo resultado2;
-	enterolargo resultado3;
-	
-	int primera_mitad_entero = (entero.size()/2-1);
-	//enterolargo primera_mitad_d = (d.entero.size()/2-1);
-}

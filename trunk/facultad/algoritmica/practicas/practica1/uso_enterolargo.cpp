@@ -14,6 +14,7 @@ autor: J. Huete
 using namespace std;
 
 
+
 int main () {
 
 string a;
@@ -38,3 +39,5 @@ cout << "producto " << aux << endl;
 return (0);
 
 }
+
+enterolargo enterolargo::dyv_multiplicacion( enterolargo & d){}
