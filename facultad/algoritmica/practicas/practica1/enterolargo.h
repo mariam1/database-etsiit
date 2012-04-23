@@ -42,7 +42,6 @@ private:
  void completa_izq(int n);
  void ajusta( );
  int pot_2(int n);
- char signo;
   
   // Por simplicidad asumimos numeros positivos.....
   vector<int> entero;  
