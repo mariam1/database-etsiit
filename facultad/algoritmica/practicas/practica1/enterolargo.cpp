@@ -83,12 +83,6 @@ ostream & operator<<(ostream & x, enterolargo & e){
   return x;
 }
 
-enterolargo enterolargo::clasico(enterolargo & e){
-		enterolargo resul;
-		
-}
-
-
 
 enterolargo  enterolargo::operator*(enterolargo & d){
 
@@ -148,6 +142,7 @@ if (acarreo>0) resul.entero.push_back(acarreo);
 //cout << "acarreo: " << acarreo << endl;
 //cout << "resultado: " << resul << endl;
 return resul;
+
 }
  
  
@@ -197,3 +192,19 @@ return resul;
 
 }//fin metodo resta
 
+enterolargo enterolargo::digitos(unsigned int &a, unsigned int &b)
+{
+enterolargo res;
+//int aux = min(b, (unsigned int)digitos.size()-1);
+
+int Nmin = (( b < entero.size()-1)?b:entero.size()-1);
+cout << Nmin << endl;
+
+while (Nmin>=0 && entero[Nmin]==0)
+Nmin--;
+
+for (int i=Nmin; i>=MAX(/*(int)*/a, 0); i--)
+res.entero.insert(res.entero.begin(), entero[i]);
+
+return res;
+}
