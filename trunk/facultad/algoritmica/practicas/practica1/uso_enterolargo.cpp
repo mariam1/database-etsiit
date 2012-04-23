@@ -35,7 +35,7 @@ enterolargo aux;
 
 cout << numero1 << " " << numero2 << "\n\n";
 aux = numero1*numero2;
-cout << "producto " << aux << endl; 
+cout << "producto: " << aux << endl; 
 return (0);
 
 }

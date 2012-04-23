@@ -32,6 +32,7 @@ public:
   enterolargo & operator= (const enterolargo & e);
   enterolargo clasico(enterolargo & d, enterolargo & e);
   enterolargo dyv_multiplicacion(enterolargo & d, enterolargo & e);
+  char signo; // 1 es positivo y -1 es negativo
   
   friend ostream & operator<<(ostream & x, enterolargo & e);
 
