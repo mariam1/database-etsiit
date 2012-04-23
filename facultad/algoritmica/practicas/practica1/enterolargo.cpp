@@ -86,30 +86,23 @@ ostream & operator<<(ostream & x, enterolargo & e){
 
 enterolargo  enterolargo::operator*(enterolargo & d){
 
-int mul;
-int acarreo=0;
-int k;
-int lon=this->entero.size();
+int acarreo;
 enterolargo resul;
 
-for(k=0;k<lon;k++){
-	mul=(entero[k]*d.entero[k])+acarreo;
-	acarreo=mul/10;
-	mul=mul%10;
-	resul.entero.push_back(mul);
-}
-
-cout << "mul_1: " << mul << endl;
-cout << "acarreo: " << acarreo << endl;
-
-if(acarreo!=0) resul.entero.push_back(acarreo);
-
-
-cout << "resul: " << resul << endl;
-
+for( int i=0; i<entero.size();i++){
+	acarreo=0;
+	enterolargo aux;
+	
+	for( int j=0; j<d.entero.size();j++){
+		aux.entero.push_back( (entero[i]*d.entero[j]+acarreo)%10);
+		acarreo = (entero[i]*d.entero[j])/10;
+		resul = resul + aux;
+		}
+	if(acarreo>0)
+		resul.entero.push_back(acarreo);
+	}
 return resul;
 }
-
 enterolargo  enterolargo::operator+(enterolargo & d){
   
 int Nmin;  
@@ -192,19 +185,3 @@ return resul;
 
 }//fin metodo resta
 
-enterolargo enterolargo::digitos(unsigned int &a, unsigned int &b)
-{
-enterolargo res;
-//int aux = min(b, (unsigned int)digitos.size()-1);
-
-int Nmin = (( b < entero.size()-1)?b:entero.size()-1);
-cout << Nmin << endl;
-
-while (Nmin>=0 && entero[Nmin]==0)
-Nmin--;
-
-for (int i=Nmin; i>=MAX(/*(int)*/a, 0); i--)
-res.entero.insert(res.entero.begin(), entero[i]);
-
-return res;
-}
