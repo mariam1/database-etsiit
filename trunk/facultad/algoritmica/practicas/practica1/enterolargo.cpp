@@ -84,21 +84,25 @@ ostream & operator<<(ostream & x, enterolargo & e){
 
 enterolargo  enterolargo::operator*(enterolargo & d){
 
-int acarreo;
 enterolargo resul;
+int acarreo;
 
-for( int i=0; i<entero.size();i++){
+for( int k = 0; k<entero.size();k++){
 	acarreo=0;
-	enterolargo aux;
-	for( int j=0; j<d.entero.size();j++){
-		aux.entero.push_back( (entero[i]*d.entero[j]+acarreo)%10);
-		acarreo = (entero[i]*d.entero[j])/10;
-		resul = resul + aux;
+	cout << "k: " << k <<endl;
+	for(int j =0;j<d.entero.size();j++){
+		resul.entero.push_back ( (entero[k]*d.entero[k]+ acarreo )%10);
+		acarreo = (entero[j]*d.entero[j] + acarreo)/10;
+		cout << "j: " << j << endl;
+		cout << "resul: " << resul << endl;
+		cout << "acarreo: " << acarreo << endl;
 		}
-	if(acarreo>0)
+		if (acarreo<0)
 		resul.entero.push_back(acarreo);
 	}
+	cout << "resul_ult: " << resul << endl;
 return resul;
+
 }
 enterolargo  enterolargo::operator+(enterolargo & d){
   
