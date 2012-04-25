@@ -30,8 +30,8 @@ public:
   enterolargo operator-(enterolargo & d);
   enterolargo operator*(enterolargo & d);
   enterolargo & operator= (const enterolargo & e);
-  enterolargo clasico(enterolargo & d, enterolargo & e);
-  enterolargo dyv_multiplicacion(enterolargo & e);
+  enterolargo dyv_basico(enterolargo & d);
+  enterolargo dyv_mejorado(enterolargo & e);
   
   friend ostream & operator<<(ostream & x, enterolargo & e);
 

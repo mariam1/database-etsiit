@@ -1,14 +1,14 @@
 # Nombre: makefile_dyv
 # Descripcion: genera el ejecutable uso_dyv
 
-uso_dyv: enterolargo.o uso_dyv.o
-	g++ -o uso_dyv enterolargo.o uso_dyv.o
+dyv_mejorado: enterolargo.o dyv_mejorado.o
+	g++ -o dyv_mejorado enterolargo.o dyv_mejorado.o
 
 enterolargo.o: enterolargo.cpp
 	g++ -c enterolargo.cpp
-uso_dyv.o: uso_dyv.cpp
-	g++ -c uso_dyv.cpp
+
+dyv_mejorado.o: dyv_mejorado.cpp
+	g++ -c dyv_mejorado.cpp
 
 clean:
-	rm *.o
-	rm uso_dyv
+	rm dyv_mejorado
