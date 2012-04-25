@@ -89,18 +89,24 @@ int acarreo;
 
 for( int k = 0; k<entero.size();k++){
 	acarreo=0;
+	enterolargo auxiliar;
 	cout << "k: " << k <<endl;
 	for(int j =0;j<d.entero.size();j++){
-		resul.entero.push_back ( (entero[k]*d.entero[k]+ acarreo )%10);
-		acarreo = (entero[j]*d.entero[j] + acarreo)/10;
+		auxiliar.entero.push_back ( (entero[k]*d.entero[j]+ acarreo )%10);
+		acarreo = (entero[k]*d.entero[j] + acarreo)/10;
 		cout << "j: " << j << endl;
 		cout << "resul: " << resul << endl;
 		cout << "acarreo: " << acarreo << endl;
 		}
-		if (acarreo<0)
-		resul.entero.push_back(acarreo);
-	}
+		if (acarreo>0){
+		auxiliar.entero.push_back(acarreo);
+		
+		}
+		auxiliar.desplazarDerecha(k);
+		resul = resul + auxiliar;
+	}	
 	cout << "resul_ult: " << resul << endl;
+
 return resul;
 
 }
