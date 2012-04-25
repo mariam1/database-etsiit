@@ -1,0 +1,14 @@
+# Nombre: make_dyv_basico
+# Descripcion: genera el ejecutable dyv_basico
+
+dyv_basico: enterolargo.o dyv_basico.o
+	g++ -o dyv_basico enterolargo.o dyv_basico.o
+
+enterolargo.o: enterolargo.cpp
+	g++ -c enterolargo.cpp
+
+dyv_basico.o: dyv_basico.cpp
+	g++ -c dyv_basico.cpp
+
+clean:
+	rm dyv_basico
