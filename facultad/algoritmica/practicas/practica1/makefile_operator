@@ -1,0 +1,16 @@
+# Nombre: makefile_operator
+# Descripcion: Crea ejecutable uso_operator
+
+uso_operator: enterolargo.o uso_operator.o
+	g++ -o uso_operator enterolargo.o uso_operator.o
+
+enterolargo.o: enterolargo.cpp enterolargo.h
+	g++ -c enterolargo.cpp
+
+uso_operator.o: uso_operator.cpp
+	g++ -c uso_operator.cpp
+
+
+clean:
+	rm *.o
+	rm uso_operator
