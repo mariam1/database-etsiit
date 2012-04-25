@@ -12,5 +12,5 @@ uso_operator.o: uso_operator.cpp
 
 
 clean:
-	rm *.o
 	rm uso_operator
+	rm *.o
