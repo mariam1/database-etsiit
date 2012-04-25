@@ -90,7 +90,7 @@ int acarreo;
 for( int k = 0; k<entero.size();k++){
 	acarreo=0;
 	enterolargo auxiliar;
-	cout << "k: " << k <<endl;
+//	cout << "k: " << k <<endl;
 	for(int j =0;j<d.entero.size();j++){
 		auxiliar.entero.push_back ( (entero[k]*d.entero[j]+ acarreo )%10);
 		acarreo = (entero[k]*d.entero[j] + acarreo)/10;
